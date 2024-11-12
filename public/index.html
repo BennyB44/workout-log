@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Workout Log</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+  <div class="container">
+    <h1>Workout Log</h1>
+    <form id="workoutForm">
+      <div style="display: flex; gap: 1rem;">
+        <div>
+          <label for="date">Date:</label>
+          <input type="date" id="date" name="date">
+        </div>
+        
+        <div>
+          <label for="time">Time:</label>
+          <input type="time" id="time" name="time">
+        </div>
+        
+        <div>
+          <label for="program">Program:</label>
+          <input type="text" id="program" name="program">
+        </div>
+        
+        <div>
+          <label for="phase">Phase:</label>
+          <input type="text" id="phase" name="phase">
+        </div>
+      </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Exercise</th>
+              <th>Weight/Reps</th>
+              <th>Set 1</th>
+              <th>Set 2</th>
+              <th>Set 3</th>
+              <th>Set 4</th>
+              <th>Set 5</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Barbell Squats -->
+            <tr>
+              <td>Barbell Squats / Dumbbell Squats</td>
+              <td>2 x 12-16</td>
+              <td>
+                <div class="set-input">
+                  <label>Reps:</label>
+                  <input type="number" name="squatSet1Reps" min="0" />
+                  <label>Weight:</label>
+                  <input
+                    type="number"
+                    name="squatSet1Weight"
+                    min="0"
+                    step="0.5"
+                  />
+                </div>
+              </td>
+              <td>
+                <div class="set-input">
+                  <label>Reps:</label>
+                  <input type="number" name="squatSet2Reps" min="0" />
+                  <label>Weight:</label>
+                  <input
+                    type="number"
+                    name="squatSet2Weight"
+                    min="0"
+                    step="0.5"
+                  />
+                </div>
+              </td>
+              <td>
+                <div class="set-input">
+                  <label>Reps:</label>
+                  <input type="number" name="squatSet3Reps" min="0" />
+                  <label>Weight:</label>
+                  <input
+                    type="number"
+                    name="squatSet3Weight"
+                    min="0"
+                    step="0.5"
+                  />
+                </div>
+              </td>
+              <td>
+                <div class="set-input">
+                  <label>Reps:</label>
+                  <input type="number" name="squatSet4Reps" min="0" />
+                  <label>Weight:</label>
+                  <input
+                    type="number"
+                    name="squatSet4Weight"
+                    min="0"
+                    step="0.5"
+                  />
+                </div>
+              </td>
+              <td>
+                <div class="set-input">
+                  <label>Reps:</label>
+                  <input type="number" name="squatSet5Reps" min="0" />
+                  <label>Weight:</label>
+                  <input
+                    type="number"
+                    name="squatSet5Weight"
+                    min="0"
+                    step="0.5"
+                  />
+                </div>
+              </td>
+            </tr>
+
+            <!-- Walking Lunges -->
+            <tr>
+              <td>Walking Lunges</td>
+              <td>1 x 16-20</td>
+              <td>
+                <div class="set-input">
+                  <label>Reps:</label>
+                  <input type="number" name="lungeSet1Reps" min="0" />
+                  <label>Weight:</label>
+                  <input
+                    type="number"
+                    name="lungeSet1Weight"
+                    min="0"
+                    step="0.5"
+                  />
+                </div>
+              </td>
+              <td>
+                <div class="set-input">
+                  <label>Reps:</label>
+                  <input type="number" name="lungeSet2Reps" min="0" />
+                  <label>Weight:</label>
+                  <input
+                    type="number"
+                    name="lungeSet2Weight"
+                    min="0"
+                    step="0.5"
+                  />
+                </div>
+              </td>
+              <td>
+                <div class="set-input">
+                  <label>Reps:</label>
+                  <input type="number" name="lungeSet3Reps" min="0" />
+                  <label>Weight:</label>
+                  <input
+                    type="number"
+                    name="lungeSet3Weight"
+                    min="0"
+                    step="0.5"
+                  />
+                </div>
+              </td>
+              <td>
+                <div class="set-input">
+                  <label>Reps:</label>
+                  <input type="number" name="lungeSet4Reps" min="0" />
+                  <label>Weight:</label>
+                  <input
+                    type="number"
+                    name="lungeSet4Weight"
+                    min="0"
+                    step="0.5"
+                  />
+                </div>
+              </td>
+              <td>
+                <div class="set-input">
+                  <label>Reps:</label>
+                  <input type="number" name="lungeSet5Reps" min="0" />
+                  <label>Weight:</label>
+                  <input
+                    type="number"
+                    name="lungeSet5Weight"
+                    min="0"
+                    step="0.5"
+                  />
+                </div>
+              </td>
+            </tr>
+
+            <!-- Barbell Deadlift / Dumbbell Sumo Deadlift -->
+            <tr>
+              <td>Barbell Deadlift / Dumbbell Sumo Deadlift</td>
+              <td>1 x 8-12</td>
+              <td>
+                <div class="set-input">
+                  <label>Reps:</label>
+                  <input type="number" name="deadliftSet1Reps" min="0" />
+                  <label>Weight:</label>
+                  <input
+                    type="number"
+                    name="deadliftSet1Weight"
+                    min="0"
+                    step="0.5"
+                  />
+                </div>
+              </td>
+              <td>
+                <div class="set-input">
+                  <label>Reps:</label>
+                  <input type="number" name="deadliftSet2Reps" min="0" />
+                  <label>Weight:</label>
+                  <input
+                    type="number"
+                    name="deadliftSet2Weight"
+                    min="0"
+                    step="0.5"
+                  />
+                </div>
+              </td>
+              <td>
+                <div class="set-input">
+                  <label>Reps:</label>
+                  <input type="number" name="deadliftSet3Reps" min="0" />
+                  <label>Weight:</label>
+                  <input
+                    type="number"
+                    name="deadliftSet3Weight"
+                    min="0"
+                    step="0.5"
+                  />
+                </div>
+              </td>
+              <td>
+                <div class="set-input">
+                  <label>Reps:</label>
+                  <input type="number" name="deadliftSet4Reps" min="0" />
+                  <label>Weight:</label>
+                  <input
+                    type="number"
+                    name="deadliftSet4Weight"
+                    min="0"
+                    step="0.5"
+                  />
+                </div>
+              </td>
+              <td>
+                <div class="set-input">
+                  <label>Reps:</label>
+                  <input type="number" name="deadliftSet5Reps" min="0" />
+                  <label>Weight:</label>
+                  <input
+                    type="number"
+                    name="deadliftSet5Weight"
+                    min="0"
+                    step="0.5"
+                  />
+                </div>
+              </td>
+            </tr>
+
+            <!-- Continue adding other exercises similarly -->
+            <!-- Example for Dumbbell Rows -->
+            <tr>
+              <td>Dumbbell Rows</td>
+              <td>2 x 12-16</td>
+              <td>
+                <div class="set-input">
+                  <label>Reps:</label>
+                  <input type="number" name="rowSet1Reps" min="0" />
+                  <label>Weight:</label>
+                  <input
+                    type="number"
+                    name="rowSet1Weight"
+                    min="0"
+                    step="0.5"
+                  />
+                </div>
+              </td>
+              <td>
+                <div class="set-input">
+                  <label>Reps:</label>
+                  <input type="number" name="rowSet2Reps" min="0" />
+                  <label>Weight:</label>
+                  <input
+                    type="number"
+                    name="rowSet2Weight"
+                    min="0"
+                    step="0.5"
+                  />
+                </div>
+              </td>
+              <td>
+                <div class="set-input">
+                  <label>Reps:</label>
+                  <input type="number" name="rowSet3Reps" min="0" />
+                  <label>Weight:</label>
+                  <input
+                    type="number"
+                    name="rowSet3Weight"
+                    min="0"
+                    step="0.5"
+                  />
+                </div>
+              </td>
+              <td>
+                <div class="set-input">
+                  <label>Reps:</label>
+                  <input type="number" name="rowSet4Reps" min="0" />
+                  <label>Weight:</label>
+                  <input
+                    type="number"
+                    name="rowSet4Weight"
+                    min="0"
+                    step="0.5"
+                  />
+                </div>
+              </td>
+              <td>
+                <div class="set-input">
+                  <label>Reps:</label>
+                  <input type="number" name="rowSet5Reps" min="0" />
+                  <label>Weight:</label>
+                  <input
+                    type="number"
+                    name="rowSet5Weight"
+                    min="0"
+                    step="0.5"
+                  />
+                </div>
+              </td>
+            </tr>
+            <!-- Add all other exercises similarly -->
+          </tbody>
+        </table>
+        <button type="submit">Save Workout</button>
+      </form>
+    </div>
+
+    <script>
+      document
+        .getElementById("workoutForm")
+        .addEventListener("submit", async function (event) {
+          event.preventDefault();
+
+          const date = document.getElementById("date").value;
+          const time = document.getElementById("time").value;
+          const program = document.getElementById("program").value;
+          const phase = document.getElementById("phase").value;
+
+          const exercises = [
+            {
+              name: "Barbell Squats / Dumbbell Squats",
+              weightReps: "2 x 12-16",
+              sets: [
+                {
+                  reps: document.querySelector('[name="squatSet1Reps"]').value,
+                  weight: document.querySelector('[name="squatSet1Weight"]')
+                    .value,
+                },
+                {
+                  reps: document.querySelector('[name="squatSet2Reps"]').value,
+                  weight: document.querySelector('[name="squatSet2Weight"]')
+                    .value,
+                },
+                {
+                  reps: document.querySelector('[name="squatSet3Reps"]').value,
+                  weight: document.querySelector('[name="squatSet3Weight"]')
+                    .value,
+                },
+                {
+                  reps: document.querySelector('[name="squatSet4Reps"]').value,
+                  weight: document.querySelector('[name="squatSet4Weight"]')
+                    .value,
+                },
+                {
+                  reps: document.querySelector('[name="squatSet5Reps"]').value,
+                  weight: document.querySelector('[name="squatSet5Weight"]')
+                    .value,
+                },
+              ],
+            },
+            {
+              name: "Walking Lunges",
+              weightReps: "1 x 16-20",
+              sets: [
+                {
+                  reps: document.querySelector('[name="lungeSet1Reps"]').value,
+                  weight: document.querySelector('[name="lungeSet1Weight"]')
+                    .value,
+                },
+                {
+                  reps: document.querySelector('[name="lungeSet2Reps"]').value,
+                  weight: document.querySelector('[name="lungeSet2Weight"]')
+                    .value,
+                },
+                {
+                  reps: document.querySelector('[name="lungeSet3Reps"]').value,
+                  weight: document.querySelector('[name="lungeSet3Weight"]')
+                    .value,
+                },
+                {
+                  reps: document.querySelector('[name="lungeSet4Reps"]').value,
+                  weight: document.querySelector('[name="lungeSet4Weight"]')
+                    .value,
+                },
+                {
+                  reps: document.querySelector('[name="lungeSet5Reps"]').value,
+                  weight: document.querySelector('[name="lungeSet5Weight"]')
+                    .value,
+                },
+              ],
+            },
+            {
+              name: "Barbell Deadlift / Dumbbell Sumo Deadlift",
+              weightReps: "1 x 8-12",
+              sets: [
+                {
+                  reps: document.querySelector('[name="deadliftSet1Reps"]')
+                    .value,
+                  weight: document.querySelector('[name="deadliftSet1Weight"]')
+                    .value,
+                },
+                {
+                  reps: document.querySelector('[name="deadliftSet2Reps"]')
+                    .value,
+                  weight: document.querySelector('[name="deadliftSet2Weight"]')
+                    .value,
+                },
+                {
+                  reps: document.querySelector('[name="deadliftSet3Reps"]')
+                    .value,
+                  weight: document.querySelector('[name="deadliftSet3Weight"]')
+                    .value,
+                },
+                {
+                  reps: document.querySelector('[name="deadliftSet4Reps"]')
+                    .value,
+                  weight: document.querySelector('[name="deadliftSet4Weight"]')
+                    .value,
+                },
+                {
+                  reps: document.querySelector('[name="deadliftSet5Reps"]')
+                    .value,
+                  weight: document.querySelector('[name="deadliftSet5Weight"]')
+                    .value,
+                },
+              ],
+            },
+            {
+              name: "Barbell Bench Press / Dumbbell Bench Press",
+              weightReps: "2 x 12-16",
+              sets: [
+                {
+                  reps: document.querySelector('[name="benchSet1Reps"]').value,
+                  weight: document.querySelector('[name="benchSet1Weight"]')
+                    .value,
+                },
+                {
+                  reps: document.querySelector('[name="benchSet2Reps"]').value,
+                  weight: document.querySelector('[name="benchSet2Weight"]')
+                    .value,
+                },
+                {
+                  reps: document.querySelector('[name="benchSet3Reps"]').value,
+                  weight: document.querySelector('[name="benchSet3Weight"]')
+                    .value,
+                },
+                {
+                  reps: document.querySelector('[name="benchSet4Reps"]').value,
+                  weight: document.querySelector('[name="benchSet4Weight"]')
+                    .value,
+                },
+                {
+                  reps: document.querySelector('[name="benchSet5Reps"]').value,
+                  weight: document.querySelector('[name="benchSet5Weight"]')
+                    .value,
+                },
+              ],
+            },
+            {
+              name: "Dumbbell Rows",
+              weightReps: "2 x 12-16",
+              sets: [
+                {
+                  reps: document.querySelector('[name="rowSet1Reps"]').value,
+                  weight: document.querySelector('[name="rowSet1Weight"]')
+                    .value,
+                },
+                {
+                  reps: document.querySelector('[name="rowSet2Reps"]').value,
+                  weight: document.querySelector('[name="rowSet2Weight"]')
+                    .value,
+                },
+                {
+                  reps: document.querySelector('[name="rowSet3Reps"]').value,
+                  weight: document.querySelector('[name="rowSet3Weight"]')
+                    .value,
+                },
+                {
+                  reps: document.querySelector('[name="rowSet4Reps"]').value,
+                  weight: document.querySelector('[name="rowSet4Weight"]')
+                    .value,
+                },
+                {
+                  reps: document.querySelector('[name="rowSet5Reps"]').value,
+                  weight: document.querySelector('[name="rowSet5Weight"]')
+                    .value,
+                },
+              ],
+            },
+            {
+              name: "Dumbbell Shrugs",
+              weightReps: "2 x 12-16",
+              sets: [
+                {
+                  reps: document.querySelector('[name="shrugSet1Reps"]').value,
+                  weight: document.querySelector('[name="shrugSet1Weight"]')
+                    .value,
+                },
+                {
+                  reps: document.querySelector('[name="shrugSet2Reps"]').value,
+                  weight: document.querySelector('[name="shrugSet2Weight"]')
+                    .value,
+                },
+                {
+                  reps: document.querySelector('[name="shrugSet3Reps"]').value,
+                  weight: document.querySelector('[name="shrugSet3Weight"]')
+                    .value,
+                },
+                {
+                  reps: document.querySelector('[name="shrugSet4Reps"]').value,
+                  weight: document.querySelector('[name="shrugSet4Weight"]')
+                    .value,
+                },
+                {
+                  reps: document.querySelector('[name="shrugSet5Reps"]').value,
+                  weight: document.querySelector('[name="shrugSet5Weight"]')
+                    .value,
+                },
+              ],
+            },
+            {
+              name: "Standing Dumbbell Shoulder Press",
+              weightReps: "2 x 12-16",
+              sets: [
+                {
+                  reps: document.querySelector('[name="shoulderSet1Reps"]')
+                    .value,
+                  weight: document.querySelector('[name="shoulderSet1Weight"]')
+                    .value,
+                },
+                {
+                  reps: document.querySelector('[name="shoulderSet2Reps"]')
+                    .value,
+                  weight: document.querySelector('[name="shoulderSet2Weight"]')
+                    .value,
+                },
+                {
+                  reps: document.querySelector('[name="shoulderSet3Reps"]')
+                    .value,
+                  weight: document.querySelector('[name="shoulderSet3Weight"]')
+                    .value,
+                },
+                {
+                  reps: document.querySelector('[name="shoulderSet4Reps"]')
+                    .value,
+                  weight: document.querySelector('[name="shoulderSet4Weight"]')
+                    .value,
+                },
+                {
+                  reps: document.querySelector('[name="shoulderSet5Reps"]')
+                    .value,
+                  weight: document.querySelector('[name="shoulderSet5Weight"]')
+                    .value,
+                },
+              ],
+            },
+            {
+              name: "Rear Delt Flyes / Dumbbell Rear Delt Flyes",
+              weightReps: "2 x 12-16 / 1 x 12-16",
+              sets: [
+                {
+                  reps: document.querySelector('[name="rearDeltSet1Reps"]')
+                    .value,
+                  weight: document.querySelector('[name="rearDeltSet1Weight"]')
+                    .value,
+                },
+                {
+                  reps: document.querySelector('[name="rearDeltSet2Reps"]')
+                    .value,
+                  weight: document.querySelector('[name="rearDeltSet2Weight"]')
+                    .value,
+                },
+                {
+                  reps: document.querySelector('[name="rearDeltSet3Reps"]')
+                    .value,
+                  weight: document.querySelector('[name="rearDeltSet3Weight"]')
+                    .value,
+                },
+                {
+                  reps: document.querySelector('[name="rearDeltSet4Reps"]')
+                    .value,
+                  weight: document.querySelector('[name="rearDeltSet4Weight"]')
+                    .value,
+                },
+                {
+                  reps: document.querySelector('[name="rearDeltSet5Reps"]')
+                    .value,
+                  weight: document.querySelector('[name="rearDeltSet5Weight"]')
+                    .value,
+                },
+              ],
+            },
+            {
+              name: "Barbell Curls",
+              weightReps: "2 x 12-16",
+              sets: [
+                {
+                  reps: document.querySelector('[name="curlSet1Reps"]').value,
+                  weight: document.querySelector('[name="curlSet1Weight"]')
+                    .value,
+                },
+                {
+                  reps: document.querySelector('[name="curlSet2Reps"]').value,
+                  weight: document.querySelector('[name="curlSet2Weight"]')
+                    .value,
+                },
+                {
+                  reps: document.querySelector('[name="curlSet3Reps"]').value,
+                  weight: document.querySelector('[name="curlSet3Weight"]')
+                    .value,
+                },
+                {
+                  reps: document.querySelector('[name="curlSet4Reps"]').value,
+                  weight: document.querySelector('[name="curlSet4Weight"]')
+                    .value,
+                },
+                {
+                  reps: document.querySelector('[name="curlSet5Reps"]').value,
+                  weight: document.querySelector('[name="curlSet5Weight"]')
+                    .value,
+                },
+              ],
+            },
+            {
+              name: "Tricep Pressdown / Close Grip Push Up",
+              weightReps: "2 x 12-16",
+              sets: [
+                {
+                  reps: document.querySelector('[name="tricepSet1Reps"]').value,
+                  weight: document.querySelector('[name="tricepSet1Weight"]')
+                    .value,
+                },
+                {
+                  reps: document.querySelector('[name="tricepSet2Reps"]').value,
+                  weight: document.querySelector('[name="tricepSet2Weight"]')
+                    .value,
+                },
+                {
+                  reps: document.querySelector('[name="tricepSet3Reps"]').value,
+                  weight: document.querySelector('[name="tricepSet3Weight"]')
+                    .value,
+                },
+                {
+                  reps: document.querySelector('[name="tricepSet4Reps"]').value,
+                  weight: document.querySelector('[name="tricepSet4Weight"]')
+                    .value,
+                },
+                {
+                  reps: document.querySelector('[name="tricepSet5Reps"]').value,
+                  weight: document.querySelector('[name="tricepSet5Weight"]')
+                    .value,
+                },
+              ],
+            },
+            {
+              name: "Isometric Planks",
+              weightReps: "2 x 30-60 sec",
+              sets: [
+                {
+                  reps: document.querySelector('[name="plankSet1Reps"]').value,
+                  weight: document.querySelector('[name="plankSet1Weight"]')
+                    .value,
+                },
+                {
+                  reps: document.querySelector('[name="plankSet2Reps"]').value,
+                  weight: document.querySelector('[name="plankSet2Weight"]')
+                    .value,
+                },
+                {
+                  reps: document.querySelector('[name="plankSet3Reps"]').value,
+                  weight: document.querySelector('[name="plankSet3Weight"]')
+                    .value,
+                },
+                {
+                  reps: document.querySelector('[name="plankSet4Reps"]').value,
+                  weight: document.querySelector('[name="plankSet4Weight"]')
+                    .value,
+                },
+                {
+                  reps: document.querySelector('[name="plankSet5Reps"]').value,
+                  weight: document.querySelector('[name="plankSet5Weight"]')
+                    .value,
+                },
+              ],
+            },
+            {
+              name: "Bodyweight Calf Raises",
+              weightReps: "2 x 20-40",
+              sets: [
+                {
+                  reps: document.querySelector('[name="calfSet1Reps"]').value,
+                  weight: document.querySelector('[name="calfSet1Weight"]')
+                    .value,
+                },
+                {
+                  reps: document.querySelector('[name="calfSet2Reps"]').value,
+                  weight: document.querySelector('[name="calfSet2Weight"]')
+                    .value,
+                },
+                {
+                  reps: document.querySelector('[name="calfSet3Reps"]').value,
+                  weight: document.querySelector('[name="calfSet3Weight"]')
+                    .value,
+                },
+                {
+                  reps: document.querySelector('[name="calfSet4Reps"]').value,
+                  weight: document.querySelector('[name="calfSet4Weight"]')
+                    .value,
+                },
+                {
+                  reps: document.querySelector('[name="calfSet5Reps"]').value,
+                  weight: document.querySelector('[name="calfSet5Weight"]')
+                    .value,
+                },
+              ],
+            },
+          ];
+
+          const workoutData = { date, time, program, phase, exercises };
+
+          try {
+            const response = await fetch("/api/workout", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(workoutData),
+            });
+
+            const result = await response.json();
+
+            if (response.ok) {
+              alert(result.message);
+              document.getElementById("workoutForm").reset();
+            } else {
+              alert(result.error || "An error occurred.");
+            }
+          } catch (error) {
+            console.error("Fetch error:", error);
+            alert("Failed to save workout.");
+          }
+        });
+    </script>
+  </body>
+</html>
