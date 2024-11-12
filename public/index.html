@@ -35,7 +35,7 @@
           <thead>
             <tr>
               <th>Exercise</th>
-              <th>Weight/Reps</th>
+              <th>Sets/Reps</th>
               <th>Set 1</th>
               <th>Set 2</th>
               <th>Set 3</th>
@@ -51,7 +51,10 @@
               <td>
                 <div class="set-input">
                   <label>Reps:</label>
-                  <input type="number" name="squatSet1Reps" min="0" />
+                  <button class="toggle-button" id="squatSet1Reps-button" 
+                          onmousedown="startHold(this)" 
+                          onmouseup="stopHold(this)" 
+                          onclick="handleClick(this)">0</button>
                   <label>Weight:</label>
                   <input
                     type="number"
@@ -64,8 +67,10 @@
               <td>
                 <div class="set-input">
                   <label>Reps:</label>
-                  <input type="number" name="squatSet2Reps" min="0" />
-                  <label>Weight:</label>
+                  <button class="toggle-button" id="squatSet2Reps-button" 
+                          onmousedown="startHold(this)" 
+                          onmouseup="stopHold(this)" 
+                          onclick="handleClick(this)">0</button>                  <label>Weight:</label>
                   <input
                     type="number"
                     name="squatSet2Weight"
@@ -336,6 +341,85 @@
     </div>
 
     <script>
+      
+      let holdTimeout;
+      let resetTimeout;
+
+      function handleClick(button) {
+          resetOtherButtons(button); // Reset other buttons before handling the click
+
+          if (!button.dataset.isActive) {
+              // First click: activate the button and change color without incrementing
+              button.dataset.isActive = "true";
+              button.dataset.firstClickDone = "false"; // Track first click
+              button.style.backgroundColor = button.dataset.isCountingDown === "true" ? 'red' : 'green';
+          } else if (button.dataset.firstClickDone === "true") {
+              // Increment or decrement only if first click is done
+              let count = parseInt(button.textContent) || 0;
+              const isCountingDown = button.dataset.isCountingDown === "true";
+
+              if (isCountingDown) {
+                  count = Math.max(count - 1, 0); // Decrement mode
+              } else {
+                  count++; // Increment mode
+              }
+
+              button.textContent = count;
+              startResetTimer(button);
+          } else {
+              // Mark first click as done without incrementing
+              button.dataset.firstClickDone = "true";
+          }
+      }
+
+      function startHold(button) {
+          resetOtherButtons(button); // Reset other buttons before handling hold
+
+          if (!button.dataset.isActive) {
+              button.dataset.isActive = "true";
+              button.dataset.firstClickDone = "false"; // Ensure first click state reset
+          }
+          button.style.backgroundColor = button.dataset.isCountingDown === "true" ? 'red' : 'green';
+
+          holdTimeout = setTimeout(() => {
+              const isCountingDown = button.dataset.isCountingDown === "true";
+              button.dataset.isCountingDown = !isCountingDown;
+              button.style.backgroundColor = !isCountingDown ? 'red' : 'green';
+
+              startResetTimer(button);
+          }, 600);
+      }
+
+      function stopHold(button) {
+          clearTimeout(holdTimeout);
+      }
+
+      function startResetTimer(button) {
+          clearTimeout(resetTimeout);
+          resetTimeout = setTimeout(() => {
+              button.style.backgroundColor = ''; // Remove color
+              button.dataset.isCountingDown = "false"; // Default to increment mode
+              button.dataset.isActive = ""; // Deactivate button
+              button.dataset.firstClickDone = ""; // Reset first-click tracker
+          }, 1500);
+      }
+
+      function resetOtherButtons(currentButton) {
+          document.querySelectorAll('.toggle-button').forEach(button => {
+              if (button !== currentButton) {
+                  button.style.backgroundColor = ''; // Remove color
+                  button.dataset.isCountingDown = "false"; // Default to increment mode
+                  button.dataset.isActive = ""; // Deactivate button
+                  button.dataset.firstClickDone = ""; // Reset first-click tracker
+              }
+          });
+      }
+
+
+
+
+
+      
       document
         .getElementById("workoutForm")
         .addEventListener("submit", async function (event) {
