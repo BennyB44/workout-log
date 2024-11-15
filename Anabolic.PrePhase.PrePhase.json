@@ -1,0 +1,57 @@
+[
+  {
+    "exercise_name": "BB/DB Squat",
+    "sets": 2,
+    "reps": "12-16"
+  },
+  {
+    "exercise_name": "Walking Lunges",
+    "sets": 1,
+    "reps": "16-20"
+  },
+  {
+    "exercise_name": "BB Deadlift / DB Sumo",
+    "sets": 2,
+    "reps": "8-12"  
+  },
+  {
+    "exercise_name": "BB/DD Bench Press",
+    "sets": 1,
+    "reps": "12-16"
+  }
+  {
+    "exercise_name": "DB Rows",
+    "sets": 2,
+    "reps": "12-16"
+  },
+  {
+    "exercise_name": "DB Shrugs",
+    "sets": 2,
+    "reps": "12-16"
+  },
+  {
+    "exercise_name": "DB/Cable Rear Delt Flys",
+    "sets": 2,
+    "reps": "12-16"
+  },
+  {
+    "exercise_name": "BB Curls",
+    "sets": 2,
+    "reps": "12-16"
+  },
+  {
+    "exercise_name": "Tricep Pressdown / CG Push Up",
+    "sets": 2,
+    "reps": "12-16"
+  },
+  {
+    "exercise_name": "Isometric Planks",
+    "sets": 2,
+    "reps": "30-60 secs"
+  },
+  {
+    "exercise_name": "Bodyweight Calf Rasies",
+    "sets": 2,
+    "reps": "20-40"
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "exercise_name": "Box Squat",
+    "sets": 1,
+    "reps": "10"
+  },
+  {
+    "exercise_name": "BB/DB Squats",
+    "sets": 5,
+    "reps": "1-4"
+  },
+  {
+    "exercise_name": "BB/DB Bench Press",
+    "sets": 5,
+    "reps": "1-4"  
+  },
+  {
+    "exercise_name": "Weighted Pull Up",
+    "sets": 2,
+    "reps": "1-6"
+  }
+  {
+    "exercise_name": "BB/DB Shrug",
+    "sets": 3,
+    "reps": "3-6"
+  },
+  {
+    "exercise_name": "BB/DB Curl",
+    "sets": 2,
+    "reps": "6-8"
+  },
+  {
+    "exercise_name": "BB/DB Skull Crusher",
+    "sets": 2,
+    "reps": "6-8"
+  },
+  {
+    "exercise_name": "Weighted Decline Sit Up",
+    "sets": 5,
+    "reps": "8-12"
+  },
+  {
+    "exercise_name": "Standing Calf Rasises",
+    "sets": 5,
+    "reps": "8-20"
+  }
+]
